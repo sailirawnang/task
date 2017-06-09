@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="setborder">
+    <div class="row">
+      <div class="col-md-12">
+         
+
+        <table class="table table-border">
+          <thead>
+            <tr>
+              <th><b>Name</b></th>
+              <th>email</th>
+              <th>Date of Birth</th>
+              <th>Mobile Number</th>
+              <th>Hobbies</th> 
+              <th> Action </th>  
+              <th> <a ui-sref="formDetail"><button  class="btn btn-success" >Create</button></a></th>        
+            </tr>
+            <tr ng-repeat="st in studentList">
+              <td>{{st.name}}</td>
+              <td>{{st.email}}</td>
+              <td>{{st.dob}}</td>
+              <td>{{st.mobile_num}}</td>
+              <td>{{st.hobbies}}</td>
+              <td><a ui-sref="formDetail({id:st._id})"><button class="btn btn-primary" data-id="edit" >Edit</button></td>
+              <td><button class="btn btn-danger" data-id="delete" ng-click=" (st._id)">Delete</button></td>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+
+<!--
+      <div class="col-md-3">
+        <div class="row">
+          <a ui-sref="formDetail" class="btn btn-primary setmargin" role="button">Create</a></br>
+        </div>
+        <div class="row">
+          <a ui-sref="formDetail" class="btn btn-info setmargin" role="button">Edit</a></div>
+        <div class="row">
+          <a href="#" class="btn btn-primary setmargin" role="button" ng-click="">Delete</a></div>
+      </div>-->

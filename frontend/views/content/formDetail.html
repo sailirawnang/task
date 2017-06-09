@@ -1,0 +1,59 @@
+<div class="container">
+
+    <form name="formName"  ng-if="!formSubmitted">
+        <h2>Enter Details</h2>
+      
+        <div class="form-group  setmargin">
+            <div class="row">
+                <div class="col-md-2">
+                    <h4> <label for="name">Name:</label></h4>
+                </div>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="name" ng-model="formData.name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <h4> <label for="email">email</label></h4>
+                </div>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="email" ng-model="formData.email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <h4> <label for="dob">Date of Birth</label></h4>
+                </div>
+                <div class="col-md-10">
+                    <input type="date" class="form-control " id="dob" ng-model="formData.dob" value="{{formData.dob | date}}">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-md-2 ">
+                <h4> <label for="mobile ">Mobile Number</label></h4>
+            </div>
+            <div class="col-md-10 ">
+                <input type="text " class="form-control " id="mobile_num "  ng-model="formData.mobile_num">
+            </div>
+        </div>
+
+
+        <div class="row ">
+            <div class="col-md-2 ">
+                <h4> <label for="usr ">Hobbies</label></h4>
+            </div>
+            <div class="col-md-10 ">
+                <input type="text " class="form-control " id="hobbies "  ng-model="formData.hobbies">
+            </div>
+        </div>
+
+           <div class="text-center">
+            <button class="btn btn-primary" ng-click="studSave(formData)" ng-disabled="formName.$invalid">Submit</button>
+            {{message}}
+        </div>
+        </form>
+ 
+</div>
